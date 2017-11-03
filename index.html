@@ -957,7 +957,7 @@ map.setMaxBounds(bounds);
 $(targetLocations).each(function(i,e) {
   var coords = map.unproject(this,0);
   var html = "<div style='text-align:center'>" + Number(i + 1) + "</div>";
-  var title = "Korok" + Number(i + 1);
+  var title = "Korok " + Number(i + 1);
   var icon = L.divIcon({className: 'div-icon', html: html});
   var markerOptions = {
     icon: icon,
