@@ -435,7 +435,7 @@ $(targetLocations).each(function(i,e) {
   var markerOptions = {
     icon: icon,
     keyboard: false,
-    title: locname
+    title: Number(i + 1) + " " + locname
   };
   L.marker(coords, markerOptions).addTo(map);  
 });
