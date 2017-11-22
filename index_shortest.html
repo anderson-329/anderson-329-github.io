@@ -33,6 +33,7 @@
 
   <body>
     <div id="botw_map"></div>
+    <button onclick="animatePath()">Animate Path</button>
     <script>
 var targetLocations = [
 [384.26, 135.36],
@@ -962,6 +963,13 @@ $(targetLocations).each(function(i,e) {
   };
   L.marker(coords, markerOptions).addTo(map);  
 });
+function animatePath() {
+  $(map).each(function() {
+    setTimeout(function (){
+      map.panTo(marker.getLatLng());
+    }, 5000);
+  }    
+}
     </script>
   </body>
 </html>
