@@ -964,7 +964,8 @@ $(targetLocations).each(function(i,e) {
   L.marker(coords, markerOptions).addTo(map);  
 });
 function animatePath() {
-  $(map._layers)[0].each(function() {
+  var markers = $(map._layers)[0];
+  $(markers).each(function() {
     if (this._latlng !== undefined)
     {    
       setTimeout(function (){
