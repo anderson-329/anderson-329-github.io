@@ -963,15 +963,10 @@ $(targetLocations).each(function(i,e) {
   };
   L.marker(coords, markerOptions).addTo(map);  
 });
-function animatePath() {
-  map.eachLayer(function(layer) {
-    if (layer._latlng !== undefined)
-    {    
-      setTimeout(function (){
-        map.panTo(layer._latlng);
-      }, 5000);
-    }
-  });
+var marker = 26;	    
+function animatePath() {	
+  map.panTo(map._layer[marker]._latlng);
+  marker += 1;
 }
     </script>
   </body>
