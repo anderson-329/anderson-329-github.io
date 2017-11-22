@@ -965,8 +965,8 @@ $(targetLocations).each(function(i,e) {
 });
 var marker = 27;	    
 function animatePath() {	
-  map.panTo(map._layers[marker]._latlng);
-  marker += 1;
+  map.flyTo(map._layers[marker]._latlng);
+  marker += 2;
 }
     </script>
   </body>
