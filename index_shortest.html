@@ -964,9 +964,11 @@ $(targetLocations).each(function(i,e) {
   L.marker(coords, markerOptions).addTo(map);  
 });
 var marker = 27;	    
-function animatePath() {	
-  map.flyTo(map._layers[marker]._latlng);
-  marker += 2;
+function animatePath() {
+  for (i = 1; i < 900; i++) { 
+    map.flyTo(map._layers[marker]._latlng,{duration: 1});
+    marker += 2;
+  }
 }
     </script>
   </body>
