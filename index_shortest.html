@@ -964,14 +964,14 @@ $(targetLocations).each(function(i,e) {
   L.marker(coords, markerOptions).addTo(map);  
 });
 function animatePath() {
-  $(map._layers).each(function() {
-    if (this._latlng !== undefined)
+  map.eachLayer(function(layer) {
+    if (layer._latlng !== undefined)
     {    
       setTimeout(function (){
-        map.panTo(this._latlng);
+        map.panTo(layer._latlng);
       }, 5000);
     }
-  });    
+  });
 }
     </script>
   </body>
