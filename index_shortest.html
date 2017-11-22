@@ -965,6 +965,7 @@ $(targetLocations).each(function(i,e) {
 });
 function animatePath() {
   $(map).each(function() {
+    var marker = this;
     setTimeout(function (){
       map.panTo(marker.getLatLng());
     }, 5000);
