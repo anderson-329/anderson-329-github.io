@@ -964,12 +964,14 @@ $(targetLocations).each(function(i,e) {
   L.marker(coords, markerOptions).addTo(map);  
 });
 function animatePath() {
-  $(map).each(function() {
-    var marker = this;
-    setTimeout(function (){
-      map.panTo(marker.getLatLng());
-    }, 5000);
-  });    
+  $(map[0]._layers).each(function() {
+    if (this._latlng !== undefined)
+    {    
+      setTimeout(function (){
+        map.panTo(this._latlng);
+      }, 5000);
+    }
+  }    
 }
     </script>
   </body>
